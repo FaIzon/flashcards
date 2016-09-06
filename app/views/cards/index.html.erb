@@ -10,6 +10,16 @@
     <td><%= card.original_text %></td>
     <td><%= card.translated_text %></td>
     <td><%= card.review_date.strftime("%d/%m/%Y") %></td>
+    <td>
+      <div class="btn-group">
+        <%= link_to edit_card_path(card), class: "btn btn-warning btn-sm" do %>
+          <%= t(:edit) %>
+        <% end %>
+        <%= link_to card_path(card), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger btn-sm"  do %>
+          <%= t(:destroy) %>
+        <% end %>
+      </div>
+</td>
   </tr>
   <% end %>
 </table>
