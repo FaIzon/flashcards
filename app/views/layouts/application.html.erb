@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<%= csrf_meta_tags %>
 <head>
   <title>Флэшкарточкер</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -18,7 +18,7 @@
       </div>
       <ul class="nav navbar-nav">
         <li><%= link_to 'Все карточки', cards_path %></li>
-        <li><a href="#">Добавить карточку</a></li>
+        <li><%= link_to 'Добавить карточку', new_card_path %></li>
       </ul>
     </header>
     <section>
