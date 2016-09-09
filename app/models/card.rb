@@ -8,8 +8,8 @@ class Card  <  ActiveRecord::Base
   end
 
       def check_translate_text
-        errors.add(:original_text, 'Check the Word')
-        if self.original_text.mb_chars.upcase.to_s == self.translated_text.mb_chars.upcase.to_s
-        end
+          if self.original_text.mb_chars.upcase.to_s == self.translated_text.mb_chars.upcase.to_s
+            errors.add(:original_text, 'Check the Word')
+          end
      end
   end

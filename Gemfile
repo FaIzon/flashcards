@@ -6,6 +6,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'simple_form'
+gem 'pg'
+gem 'nokogiri'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -21,10 +23,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :test do
-  gem 'sqlite3'
-end
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,7 +37,4 @@ group :development do
   gem 'spring'
 end
 
-group :development, :production do
-  gem 'pg'
-end
 
