@@ -1,1 +1,6 @@
 <p style="font-size: 22px;">Первый в мире удобный менеджер флеш-карточек. Именно так.</p>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
+<%= render 'random_card', card: @card, path: request.path unless @card.blank? %>

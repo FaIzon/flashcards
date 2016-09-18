@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <%= simple_form_for @card, url: url_for(controller: 'home', action: 'check'), method: :post, wrapper: :inline_form do |f| %>
+      <%= f.input_field :original_text, value: '', as: :string %>
+      <%= f.input :id, as: :hidden %>
+      <%= f.button :submit, 'Проверить', class: 'btn btn-sm' %>
+    <% end %>
+  </div>
+  <div class="panel-body">
+    <%= card.translated_text %>
+    <span class="pull-right">
+        <%= card.review_date.strftime('%d.%m.%Y') %>
+      </span>
+  </div>
+</div>
