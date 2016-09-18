@@ -12,8 +12,8 @@ class Card  <  ActiveRecord::Base
     self.review_date = Time.now + 3.days
   end
 
-  def words_are_equal?(first_word, second_word)
-    first_word.casecmp(second_word).zero?
+  def update_review_date(random_card_original_text)
+    update_attribute(:review_date, set_review_date)
   end
 
   def check_translate_text
